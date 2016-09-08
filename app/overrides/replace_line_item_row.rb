@@ -8,7 +8,7 @@ Deface::Override.new(:virtual_path => "orders/_line_item",
                      :name => "converted_line_item_price_1234",
                      :replace => "[data-hook='cart_item_price']",
                      :text => %q(
-                       <td>
+                       <td class="cart_item_price">
                          <%= number_to_currency line_item.price %>
                        </td>
                      ))
@@ -17,9 +17,7 @@ Deface::Override.new(:virtual_path => "orders/_line_item",
                      :name => "converted_line_item_total_456",
                      :replace => "[data-hook='cart_item_total']",
                      :text => %q(
-                       <td>
+                       <td class="cart_item_total">
                          <%= number_to_currency (line_item.price * line_item.quantity) %>
                        </td>
                      ))
-
-
